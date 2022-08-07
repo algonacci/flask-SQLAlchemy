@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flask SQLAlchemy</title>
+</head>
+<body>
+    
+    <h3>Students Database - Flask SQLAlchemy</h3>
+
+    <hr>
+
+    {% for category, message in get_flashed_messages(with_categories=true) %}
+        <div class="alert alert-{{ category }}">
+            {{ message }}
+        </div>
+    {% endfor %}
+
+    <form action="/add" method="post">
+        <label for="name">Name:</label>
+        <br>
+        <input type="text" name="name" id="name">
+        <br>
+        <label for="city">City:</label>
+        <br>
+        <input type="text" name="city" id="city">
+        <br>
+        <label for="address">Address:</label>
+        <br>
+        <input type="text" name="address" id="address">
+        <br>
+        <label for="phone_number">Phone Number:</label>
+        <br>
+        <input type="number" name="phone_number" id="phone_number">
+        <br>
+        <input type="submit" value="Add">
+    </form>
+
+</body>
+</html>
